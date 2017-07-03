@@ -1,0 +1,52 @@
+#Write one line of Python that takes this list a and makes a new list that has only the even elements of this list in it.
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+even = [b for b in a if b%2 == 0]
+print(even)
+
+#Write one line of Python that takes this list a and makes a new list that has only the odd elements of this list in it.
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+odd = [b for b in a if b%2 != 0]
+print(odd)
+
+#Prime Numbers
+
+def check_prime(num):
+    
+    for c in range(2,num-1):
+        if(num%c == 0):
+            return 0
+    
+    return 1
+
+num = int(input("Enter a number :\n"))
+result = check_prime(num)
+if(result == 1):
+    print("The number is a prime Number\n")
+else:
+    print("The number is not a prime number\n")
+    
+#List Ends
+
+def list_ends(a_list):
+    return [a_list[0], a_list[len(a_list)-1]]
+
+input_list = input("Enter the elements of the list\n")
+integer_list = input_list.split()
+integer_list = [int(a) for a in integer_list]
+
+result = list_ends(integer_list)
+
+print(result)
+
+#Fibonacci series
+
+def fibo(n):
+    if n<2:
+        return n
+    return fibo(n-2) + fibo(n-1)
+
+num = int(input("Enter the number :\n"))
+print("Fibonacci Series of",num,"is\n")
+for i in range(num):
+    print(fibo(i))
+
