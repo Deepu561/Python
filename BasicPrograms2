@@ -1,0 +1,53 @@
+''' 4) Create a program that asks the user for a number and then prints out a list of all the divisors 
+of that number. (If you donâ€™t know what a divisor is, it is a number that divides evenly into another number. 
+For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)'''
+
+num = int(input("Enter a number : "))
+new_list = []
+
+for n in range(1,num+1):
+    if(num%n == 0):
+        new_list.append(n)
+print("The list of Divisors are : ",new_list)
+
+#List Overlap
+
+import random
+a = []
+for i in range(15):
+    a.append(random.randrange(1,50,1))
+print(a,'\n')
+b = []
+for j in range(20):
+    b.append(random.randrange(1,50,1))
+print(b,'\n')
+new_list = []
+c = len(a)
+
+for n in range(c):
+    if a[n] in b and a[n] not in new_list:
+        new_list.append(a[n])
+print("Common elements in both lists :",new_list)
+
+#Palindrome
+
+string = input("Enter a string : ")
+reverse = string[::-1] #[::1] is used for reversing a string
+print(reverse)
+if(string==reverse):
+    print(string,"is a palindrome")
+else:
+    print(string,"is not a palindrome")
+    
+#without using string reverse[::-1]
+string = input("Enter a String : \n")
+x = ""
+length = len(string)
+for i in range(length):
+    x += string[length-1-i]
+if(string==x):
+    print("Is a palindrome")
+else:
+    print("Is not a palindrome")
+
+    
